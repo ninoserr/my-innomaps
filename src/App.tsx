@@ -1,22 +1,20 @@
 import type { Component } from 'solid-js';
 import mapboxgl from 'mapbox-gl';
 
+// import style from './App.module.css';
 
-import styles from './App.module.css';
-
-
-const App = () => {
+const MapboxMap = () => {
   mapboxgl.accessToken = 'pk.eyJ1IjoibmljbzIyc3AiLCJhIjoiY2pxZXE4cHFqMDQ2cjQzcWoybTdycG1mOSJ9.BCmKqIglS5pygsh-e7FITw';
   const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9, // starting zoom
+    container: 'mapa',
+    style: 'mapbox://styles/mapbox/streets-v12?optimize=true',
+    center: [-79.5, -2.4], // starting position [lng, lat]
+    zoom: 8 // starting zoom
   });
 
   return (
-    <div id="map"></div>
+    <div id="mapa"></div>
   );
 };
 
-export default App;
+export default MapboxMap;

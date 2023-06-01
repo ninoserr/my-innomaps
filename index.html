@@ -4,14 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico"/>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <title>Innomaps App</title>
+
+    <style>
+      body { margin: 0; padding: 0; }
+      #mapa { position: absolute; top: 0; bottom: 0; width: 100%; }
+      </style>
   </head>
 
   <body>
     <noscript>Activar JavaScript para correr esta aplicacion.</noscript>
     <div id="root"></div>
+    <div id="mapa"></div>
 
     <script src="/src/index.tsx" type="module"></script>
   </body>

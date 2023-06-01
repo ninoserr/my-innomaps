@@ -1,9 +1,9 @@
 /* @refresh reload */
-/*<script src="https://unpkg.com/solid-js@latest/dist/solid.js"></script>*/
+
 import { render } from 'solid-js/web';
 
-import './index.css';
-import App from './App';
+// import './index.css';
+import MapboxMap from './App';
 
 const root = document.getElementById('root');
 
@@ -13,6 +13,12 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-/*new solidJS.createApp(App).render(root);*/
+const App = () => {
+  return (
+    <div>
+      <MapboxMap />
+    </div>
+  );
+};
 
 render(() => <App />, root!);
